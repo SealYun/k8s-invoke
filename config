@@ -1,0 +1,16 @@
+{
+    "hosts":[
+        {
+            "node-name":"dev-1-109",
+            "node-tags":["role=fixed", "job-type=ats"]
+        },
+        {
+            "node-name":"dev-1-109",
+            "node-tags":["role=fixed", "job-type=ats"]
+        },
+        {
+            "node-name":"dev-1-109",
+            "node-tags":["role=fixed", "job-type=ats"]
+        }
+    ]
+}
