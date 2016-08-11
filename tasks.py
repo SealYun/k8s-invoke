@@ -38,6 +38,6 @@ def clean_node_tags(ctx, config="config"):
     for h in hosts:
         for tag in h["node-tags"]:
             tag_name = get_tag_name(tag)
-            #ctx.run("kubectl label node %s %s" % (h["node-name"], tag_name))
+            #ctx.run("kubectl label node %s %s-" % (h["node-name"], tag_name))
             print "kubectl label node %s %s- " % (h["node-name"], tag_name)
 
