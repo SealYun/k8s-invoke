@@ -41,3 +41,15 @@ def clean_node_tags(ctx, config="config"):
             #ctx.run("kubectl label node %s %s-" % (h["node-name"], tag_name))
             print "kubectl label node %s %s- " % (h["node-name"], tag_name)
 
+@task
+def update_node_tags(ctx, config="config"):
+    config = get_config(config)
+
+    hosts = config["hosts"]
+
+    for h in hosts:
+        for tag in h["node-tags"]:
+            #ctx.run("kubectl label node %s %s" % (h["node-name"], tag))
+            print "kubectl label --overwrite node %s %s" % (h["node-name"], tag)
+
+
