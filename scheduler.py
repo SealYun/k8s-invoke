@@ -11,7 +11,7 @@ def tick():
 
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
-    scheduler.add_job(tick, 'cron', day_of_week="fri", minute=55)
+    scheduler.add_job(tick, 'cron', day_of_week="fri", minute=15)
     scheduler.start()
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
