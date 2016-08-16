@@ -5,13 +5,13 @@ import os
 from apscheduler.schedulers.background import BackgroundScheduler
 
 
-def tick():
+def task():
     print('Tick! The time is: %s' % datetime.now())
 
 
 if __name__ == '__main__':
     scheduler = BackgroundScheduler()
-    scheduler.add_job(tick, 'cron', day_of_week="fri", minute=15)
+    scheduler.add_job(task, 'cron', day_of_week="fri", minute=15)
     scheduler.start()
     print('Press Ctrl+{0} to exit'.format('Break' if os.name == 'nt' else 'C'))
 
